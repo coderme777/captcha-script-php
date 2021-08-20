@@ -11,7 +11,8 @@
 		private static $noises = ['b','2','8','n','3','c','7','k','1']; //массив с фоновым шумом
 		private static $colors = ['10','40','70','100','130','160','190','202','220','250'];//используемые цвета символов
 		
-		public static function generate() {
+		public static function generate() 
+		{
 			session_start();
 			$src = imagecreatetruecolor(self::WIDTH, self::HEIGHT);;//создаем холст
 			$bg_color = imagecolorallocate($src, 255, 255, 255);//создаем белый цвет
