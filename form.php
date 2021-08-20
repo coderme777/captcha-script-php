@@ -1,18 +1,14 @@
 <?php
 require_once 'captcha.php';
 $ca = Captcha::check($_POST['captcha']);
-if (isset($_POST['check_now'])) 
-{
+if (isset($_POST['check_now'])) {
 	if ($ca) echo 'Код введен верно!';
-	else 
-	{
+	else {
 		echo 'Введите правильный проверочный код.';
 	}	
 }
 
-
-    if (isset($_POST['check'])) 
-    {
+    if (isset($_POST['check'])) {
         if (Captcha::check($_POST['captcha'])) echo 'Проверочный код введён верно!';
         else echo 'Проверочный код введён неверно!';
     }
